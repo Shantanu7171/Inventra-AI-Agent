@@ -847,13 +847,6 @@ A live test pass using a real Vertex AI model and real database, without stubs, 
 The internal approval email and vendor PO email templates were also malformed (missing an HTML wrapper and plain-text part) and were rewritten.
 
 ---
-
-## ⚠️ Important Notes
-
-> Everything documented here was verified by running the system, not copied from the brief. Where observed behavior differs from expectations or the specification, the difference is explicitly called out in the relevant section.
-
-> **Before unattended operation:** Re-check `VENDOR_EMAIL_ENABLED`. Vendor emails are real commercial communications to configured supplier addresses.
-
 ---
 
 <p align="center">
