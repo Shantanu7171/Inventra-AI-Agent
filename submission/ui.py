@@ -75,6 +75,13 @@ from submission.portfolio import (  # noqa: E402
 
 st.set_page_config(page_title="Inventra — stock watch", page_icon="📦", layout="wide")
 
+# --- Auto-initialize database if missing (needed for Streamlit Cloud) ---
+import os as _os
+if not _os.path.exists(config.database_path):
+    from database.seed import init_db, seed_data
+    init_db(config.database_path)
+    seed_data(config.database_path)
+
 # Streamlit's own semantic badge colours, not hex -- these resolve against
 # whichever theme is active.
 STATUS_BADGE_COLOUR = {
